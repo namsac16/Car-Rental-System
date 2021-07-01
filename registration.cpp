@@ -61,9 +61,20 @@ ostream &operator <<(ostream &out, Role &R)
     return out;
 }
 
-int main()
+void user_registration()
 {
-    Role *ptr;
+    User U;
+    cout<<"USER REGISTRATION PORTAL\n";
+    ofstream ofs("User.txt", ios::app);
+    cin>>U;
+    ofs<<U;
+    ofs.close();
+    cout<<"User Account Created Successfully.";
+}
+
+/*int main()
+{
+    /*Role *ptr;
     Admin A;
     User U;
     int n;
@@ -90,7 +101,7 @@ int main()
     /*ofstream ofs(file, ios::app);
     cin>>*ptr;
     ofs<<*ptr;
-    ofs.close();*/
+    ofs.close();
     ifstream ifs(file);
     while(!ifs.eof())
     {
@@ -98,5 +109,6 @@ int main()
         cout<<*ptr;
     }
     ifs.close();
+    user_registration();
     return 0;
-}
+}*/

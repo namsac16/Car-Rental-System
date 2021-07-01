@@ -2,6 +2,7 @@
 #include <fstream>
 #include <conio.h>
 #include <cstring>
+#include "registration.cpp"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ void login()
         cout<<"1. ADMIN LOGIN"<<endl;
         cout<<"2. USER LOGIN"<<endl;
         cin>>n;
+        system("cls");
         switch(n)
         {
             case 1:
@@ -29,9 +31,24 @@ void login()
             case 2:
             {
                 file = "User.txt";
+                int x;
+                cout<<"1. LOGIN AS EXISTING USER\n";
+                cout<<"2. CREATE NEW USER ACCOUNT\n";
+                cin>>x;
+                switch(x)
+                {
+                    case 1 : break;
+                    case 2 : 
+                    {
+                        system("cls");
+                        user_registration();
+                        continue;
+                    }
+                }
                 break;
             }
         }
+        system("cls");
         cout<<"Enter Username: ";
         cin>>user;
         cout<<"Enter Password: ";
