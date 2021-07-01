@@ -42,6 +42,7 @@ void login()
                     {
                         system("cls");
                         user_registration();
+                        getch();
                         continue;
                     }
                 }

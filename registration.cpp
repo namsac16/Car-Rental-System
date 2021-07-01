@@ -69,7 +69,8 @@ void user_registration()
     cin>>U;
     ofs<<U;
     ofs.close();
-    cout<<"User Account Created Successfully.";
+    cout<<"User Account Created Successfully.\n";
+    cout<<"Press Any Key to Continue.\n";
 }
 
 /*int main()
