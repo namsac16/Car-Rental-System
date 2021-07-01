@@ -1,0 +1,4 @@
+Maruti Suzuki/Swift/DL05CA0502/Hatchback/5
+Renault/Kwid/DL05CB5567/Hatchback/5
+Hyundai/Grand i10/DL07AC3535/Hatchback/5
+Maruti Suzuki/Ciaz/DL03CA9696/Sedan/5

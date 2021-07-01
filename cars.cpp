@@ -83,6 +83,7 @@ class Misc : public Car{
 void input_car()
 {
     int n, seats;
+    char ch;
     string name, number, company;
     cout<<"CAR ENTRY PORTAL\n";
     cout<<"1. Hatchback\n";
@@ -94,6 +95,7 @@ void input_car()
     cout<<"Select Car Model:";
     cin>>n;
     system("cls");
+    cin.ignore();
     cout<<"Enter Car's Company: ";
     getline(cin, company);
     cout<<"Enter Car's Model Name: ";
@@ -147,7 +149,7 @@ void input_car()
     out.close();
 }
 
-int main()
+/*int main()
 {
     char ch = 'y';
     while(ch == 'y')
@@ -159,4 +161,4 @@ int main()
         ch = tolower(ch);
     }
     return 0;
-}
+}*/

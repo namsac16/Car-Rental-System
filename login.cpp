@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void login()
+int login()
 {
     int n;
     string file;
@@ -80,6 +80,10 @@ void login()
         getch();
         ifs.close();
     }
+    if(n == 1)
+        return 1;
+    else
+        return 0;
 }
 
 /*int main()

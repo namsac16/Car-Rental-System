@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 #include <fstream>
 
 using namespace std;
@@ -71,6 +72,20 @@ void user_registration()
     ofs.close();
     cout<<"User Account Created Successfully.\n";
     cout<<"Press Any Key to Continue.\n";
+    getch();
+}
+
+void admin_registration()
+{
+    Admin A;
+    cout<<"ADMIN REGISTRATION PORTAL\n";
+    ofstream ofs("Admin.txt", ios::app);
+    cin>>A;
+    ofs<<A;
+    ofs.close();
+    cout<<"Admin Account Created Successfully.\n";
+    cout<<"Press Any Key to Continue.\n";
+    getch();
 }
 
 /*int main()

@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
-    login();
+    int n = login();
+    cout<<n;
     return 0;
 }
