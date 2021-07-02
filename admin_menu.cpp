@@ -1,38 +1,45 @@
 #include <iostream>
 #include "cars.cpp"
-#include "registration.cpp"
+//#include "registration.cpp"
 
 using namespace std;
 
-void admin_menu()
+void admin_menu(bool &success)
 {
     int n;
-    cout<<"ADMIN MENU\n";
-    cout<<"1. Add New Car\n";
-    cout<<"2. Update Fare\n";
-    cout<<"3. Create New Admin\n";
-    cout<<"4. Logout\n";
-    cout<<"Select Option: ";
-    cin>>n;
-    switch(n)
+    while(1)
     {
-        case 1:
+        cout<<"ADMIN MENU\n";
+        cout<<"1. Add New Car\n";
+        cout<<"2. Update Fare\n";
+        cout<<"3. Create New Admin\n";
+        cout<<"4. Logout\n";
+        cout<<"Select Option: ";
+        cin>>n;
+        switch(n)
         {
-            input_car();
-            break;
+            case 1:
+            {
+                input_car();
+                break;
+            }
+            case 2 : break;
+            case 3:
+            {
+                admin_registration();
+                break;
+            }
+            case 4:
+            {
+                success = false;
+                return;
+            }
         }
-        case 2 : break;
-        case 3:
-        {
-            admin_registration();
-            break;
-        }
-        case 4 : return;
     }
 }
 
-int main()
+/*int main()
 {
     admin_menu();
     return 0;
-}
+}*/

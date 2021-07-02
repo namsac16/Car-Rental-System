@@ -1,11 +1,11 @@
 #include <iostream>
 #include "login.cpp"
+#include "admin_menu.cpp"
 
 using namespace std;
 
 int main()
 {
-    int n = login();
-    cout<<n;
+    login();
     return 0;
 }

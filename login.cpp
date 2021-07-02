@@ -1,12 +1,14 @@
 #include <iostream>
 #include <fstream>
 #include <conio.h>
-#include <cstring>
+#include <string>
+#include <stdlib.h>
 #include "registration.cpp"
+#include "admin_menu.cpp"
 
 using namespace std;
 
-int login()
+void login()
 {
     int n;
     string file;
@@ -19,6 +21,7 @@ int login()
         cout<<"LOGIN PORTAL\n";
         cout<<"1. ADMIN LOGIN"<<endl;
         cout<<"2. USER LOGIN"<<endl;
+        cout<<"3. EXIT"<<endl;
         cin>>n;
         system("cls");
         switch(n)
@@ -48,6 +51,7 @@ int login()
                 }
                 break;
             }
+            case 3: {exit(0);}
         }
         system("cls");
         cout<<"Enter Username: ";
@@ -79,15 +83,13 @@ int login()
         cout<<"\nPress Any Key to Continue\n";
         getch();
         ifs.close();
+        if(n == 1)
+            admin_menu(success);
     }
-    if(n == 1)
-        return 1;
-    else
-        return 0;
 }
 
-/*int main()
+int main()
 {
     login();
     return 0;
-}*/
+}
