@@ -9,6 +9,7 @@ void admin_menu(bool &success)
     int n;
     while(1)
     {
+        system("cls");
         cout<<"ADMIN MENU\n";
         cout<<"1. Add New Car\n";
         cout<<"2. Update Fare\n";

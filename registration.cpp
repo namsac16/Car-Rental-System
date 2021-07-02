@@ -64,6 +64,7 @@ ostream &operator <<(ostream &out, Role &R)
 
 void user_registration()
 {
+    system("cls");
     User U;
     cout<<"USER REGISTRATION PORTAL\n";
     ofstream ofs("User.txt", ios::app);
@@ -77,6 +78,7 @@ void user_registration()
 
 void admin_registration()
 {
+    system("cls");
     Admin A;
     cout<<"ADMIN REGISTRATION PORTAL\n";
     ofstream ofs("Admin.txt", ios::app);

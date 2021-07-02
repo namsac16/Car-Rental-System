@@ -83,13 +83,15 @@ void login()
         cout<<"\nPress Any Key to Continue\n";
         getch();
         ifs.close();
-        if(n == 1)
+        if(n == 1 && success == true)
             admin_menu(success);
+        else if(n == 2 && success == true)
+            pass;
     }
 }
 
-int main()
+/*int main()
 {
     login();
     return 0;
-}
+}*/
