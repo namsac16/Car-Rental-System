@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "registration.cpp"
 #include "admin_menu.cpp"
+#include "user_menu.cpp"
 
 using namespace std;
 
@@ -86,12 +87,12 @@ void login()
         if(n == 1 && success == true)
             admin_menu(success);
         else if(n == 2 && success == true)
-            pass;
+            user_menu(success);
     }
 }
 
-/*int main()
+int main()
 {
     login();
     return 0;
-}*/
+}

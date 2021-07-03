@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void user_menu()
+void user_menu(bool &success)
 {
     int n;
     while(1)
@@ -67,13 +67,17 @@ void user_menu()
                 break;
             }
             case 2 : break;
-            case 4 : return;
+            case 4:
+            {
+                success = false;
+                return;
+            }
         }
     }
 }
 
-int main()
+/*int main()
 {
     user_menu();
     return 0;
-}
+}*/
