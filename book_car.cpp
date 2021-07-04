@@ -3,6 +3,7 @@
 #include <vector>
 #include <sstream>
 #include <conio.h>
+#include <ctime>
 
 using namespace std;
 
@@ -66,33 +67,50 @@ void book_car(string model)
         cout<<"Confirm Car?(y/n): ";
         cin>>ans;
     }
+    cout<<"Car Confirmed!!!\n";
 
     int dd1, dd2, mm1, mm2, yy1, yy2;
-    cout<<"Car Confirmed!!!\n";
+    time_t now = time(0);
+    tm* date_time = localtime(&now);
+    int c_yy = 1900 + date_time->tm_year;
+    int c_mm = 1 + date_time->tm_mon;
+    int c_dd = date_time->tm_mday;
+    int correct = 0;
+    ans = 'n';
     cout<<"Press any Key for Date Booking.";
     getch();
-    while(1)
+    while(tolower(ans) != 'y')
     {
         system("cls");
         cout<<"Enter Date on which Car is Required: (Seperated date by spaces as dd mm yyyy): "; 
         cin>>dd1>>mm1>>yy1;
         cout<<"Enter Date till which Car is Required: (Seperated date by spaces as dd mm yyyy): "; 
         cin>>dd2>>mm2>>yy2;
-        if(yy2 > yy1)
-            break;
-        else if(yy2 == yy1)
+        if(yy2 > yy1 && (yy2 >= c_yy && yy1 >= c_yy))
+            correct = 1;
+        else if(yy2 == yy1 && (yy2 >= c_yy && yy1 >= c_yy))
         {
-            if(mm2 > mm1)
-                break;
-            else if(mm2 == mm1)
+            if(mm2 > mm1 && (mm2 >= c_mm && mm1 >= c_mm))
+                correct = 1;
+            else if(mm2 == mm1 && (mm2 >= c_mm && mm1 >= c_mm))
             {
-                if(dd2 > dd1)
-                    break;
+                if(dd2 > dd1 && (dd2 >= c_dd && dd1 >= c_dd))
+                    correct = 1;
             }
         }
-        cout<<"There is a Problem with dates. Please press any key to re-enter!";
-        getch();
+        if(correct == 0)
+        {
+            cout<<"There is a Problem with dates. Please press any key to re-enter!";
+            getch();
+        }
+        else
+        {
+            cout<<"Confirm Dates?(y/n): ";
+            cin>>ans;
+        }
     }
+
+    cout<<"Dates Confirmed!!!\n";
 }
 
 /*int main()
@@ -101,6 +119,5 @@ void book_car(string model)
     string model;
     cin>>model;
     book_car(model);
-    getch();
     return 0;
 }*/
