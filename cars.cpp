@@ -11,6 +11,10 @@ class Car{
         string model;
         int seats;
     public:
+        string ret_mod()
+        {
+            return model;
+        }
         friend ofstream &operator <<(ofstream &ofs, Car &c);
 };
 

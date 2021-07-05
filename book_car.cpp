@@ -4,12 +4,12 @@
 #include <sstream>
 #include <conio.h>
 #include <ctime>
+#include "fare.cpp"
 
 using namespace std;
 
 void book_car(string model)
 {
-    int i = 0;
     vector<vector<string>> data1;
     vector<string> data2;
     string details, name, company, num, mod, seats;
@@ -59,6 +59,13 @@ void book_car(string model)
             cout<<j+1<<". "<<data1[j][0]<<" "<<data1[j][1]<<"\n";
         cout<<"Select Car: ";
         cin>>n;
+        if(n > data1.size())
+        {
+            cout<<"Incorrect Selection!\n";
+            cout<<"Press any Key to Select Again!";
+            getch();
+            continue;
+        }
         n--;
         cout<<"Your Selected Model of Car is: ";
         cout<<data1[n][0]<<" "<<data1[n][1]<<"\n";
@@ -111,6 +118,56 @@ void book_car(string model)
     }
 
     cout<<"Dates Confirmed!!!\n";
+    cout<<"Press any Key for Approx. Fare Generation";
+    getch();
+
+    int i, days;
+    float total_fare;
+    int kms[30];
+    string type;
+    ans = 'n';
+    while(ans == 'n')
+    {
+        system("cls");
+        cout<<"Choose your Travel-Type:\n";
+        cout<<"1. In-Station Travel\n";
+        cout<<"2. Out-Station Travel\n";
+        cout<<"Select: ";
+        cin>>i;
+        if(i == 1)
+            type = "In";
+        else if(i == 2)
+            type = "Out";
+        else
+            type = "Incorrect";
+        if(type != "Incorrect")
+        {
+            cout<<"Enter Days of Travel: ";
+            cin>>days;
+            if(days > 30)
+            {
+                cout<<"Sorry! Maximum Days allowed for Renting the Car is limited to 30\n";
+                cout<<"Press any Key to Re-Enter Fare Generation Details";
+                getch();
+                continue;
+            }
+            cout<<"Enter Kilometers Travelled in Each Day:\n"; 
+            getch();
+            for(int j = 0; j<days; j++)
+                cin>>kms[j];
+            total_fare = calculate_fare() + calculate_fare(days) + calculate_fare(mod, days, kms, type);
+            cout<<"Your Estimated Fare is: Rs. "<<total_fare;
+            ans = 'y';
+        }
+        cout<<"\nPress Any Key to View Complete Details";
+        getch();
+        system("cls");
+        cout<<"Car Selected: "<<data1[n][0]<<" "<<data1[n][1]<<"\n";
+        cout<<"Departure Date: "<<dd1<<"/"<<mm1<<"/"<<yy1<<"\n";
+        cout<<"Arrival Date: "<<dd2<<"/"<<mm2<<"/"<<yy2<<"\n";
+        cout<<"Estimated Fare: "<<total_fare<<"\n";
+        system("pause");
+    }
 }
 
 /*int main()

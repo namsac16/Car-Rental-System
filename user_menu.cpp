@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "book_car.cpp"
+#include "car_rates.cpp"
 
 using namespace std;
 
@@ -11,8 +12,8 @@ void user_menu(bool &success)
     {
         system("cls");
         cout<<"1. Book A Car\n";
-        //cout<<"2. ";
-        cout<<"4. Logout\n";
+        cout<<"2. Rate Menu\n";
+        cout<<"3. Logout\n";
         cout<<"Select Option: ";
         cin>>n;
         switch(n)
@@ -66,8 +67,12 @@ void user_menu(bool &success)
                 }
                 break;
             }
-            case 2 : break;
-            case 4:
+            case 2: 
+            {
+                display();
+                break;
+            }
+            case 3:
             {
                 success = false;
                 return;
