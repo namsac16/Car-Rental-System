@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void user_menu(bool &success)
+void user_menu(bool &success, string user, string pass)
 {
     int n;
     while(1)
@@ -21,6 +21,7 @@ void user_menu(bool &success)
             case 1:
             {
                 int x;
+                string model;
                 system("cls");
                 cout<<"CAR RENTAL PORTAL\n";
                 cout<<"Types of Cars Available are:\n";
@@ -36,35 +37,36 @@ void user_menu(bool &success)
                 {
                     case 1:
                     {
-                        book_car("Hatchback");
+                        model = "Hatchback";
                         break;
                     }
                     case 2:
                     {
-                        book_car("Sedan");
+                        model = "Sedan";
                         break;
                     }
                     case 3:
                     {
-                        book_car("Multi-Utility Vehicle (MUV)");
+                        model = "Multi-Utility Vehicle (MUV)";
                         break;
                     }
                     case 4:
                     {
-                        book_car("Sports-Utility Vehicle (SUV)");
+                        model = "Sports-Utility Vehicle (SUV)";
                         break;
                     }
                     case 5:
                     {
-                        book_car("Traveller");
+                        model = "Traveller";
                         break;
                     }
                     case 6:
                     {
-                        book_car("Bus");
+                        model = "Bus";
                         break;
                     }
                 }
+                book_car(model, user, pass);
                 break;
             }
             case 2: 

@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void book_car(string model)
+void book_car(string model, string user, string pass)
 {
     vector<vector<string>> data1;
     vector<string> data2;
@@ -122,11 +122,10 @@ void book_car(string model)
     getch();
 
     int i, days;
-    float total_fare;
-    int kms[30];
+    float min_fare;
     string type;
     ans = 'n';
-    while(ans == 'n')
+    while(1)
     {
         system("cls");
         cout<<"Choose your Travel-Type:\n";
@@ -144,29 +143,27 @@ void book_car(string model)
         {
             cout<<"Enter Days of Travel: ";
             cin>>days;
-            if(days > 30)
+            /*if(days > 30)
             {
                 cout<<"Sorry! Maximum Days allowed for Renting the Car is limited to 30\n";
                 cout<<"Press any Key to Re-Enter Fare Generation Details";
                 getch();
                 continue;
-            }
-            cout<<"Enter Kilometers Travelled in Each Day:\n"; 
+            }*/
+            min_fare = calculate_fare() + calculate_fare(days) + calculate_fare(model, days, type);
+            cout<<"Minimum Fare for your trip is: Rs. "<<min_fare<<"\n";
+            cout<<"Press Any Key to View Complete Details";
             getch();
-            for(int j = 0; j<days; j++)
-                cin>>kms[j];
-            total_fare = calculate_fare() + calculate_fare(days) + calculate_fare(mod, days, kms, type);
-            cout<<"Your Estimated Fare is: Rs. "<<total_fare;
-            ans = 'y';
+            system("cls");
+            cout<<"Car Selected: "<<data1[n][0]<<" "<<data1[n][1]<<"\n";
+            cout<<"Departure Date: "<<dd1<<"/"<<mm1<<"/"<<yy1<<"\n";
+            cout<<"Arrival Date: "<<dd2<<"/"<<mm2<<"/"<<yy2<<"\n";
+            cout<<"Estimated Fare: "<<min_fare<<"\n";
+            system("pause");
+            break;
         }
-        cout<<"\nPress Any Key to View Complete Details";
+        cout<<"You have selected a Wrong Option. Press a Key to Select Again";
         getch();
-        system("cls");
-        cout<<"Car Selected: "<<data1[n][0]<<" "<<data1[n][1]<<"\n";
-        cout<<"Departure Date: "<<dd1<<"/"<<mm1<<"/"<<yy1<<"\n";
-        cout<<"Arrival Date: "<<dd2<<"/"<<mm2<<"/"<<yy2<<"\n";
-        cout<<"Estimated Fare: "<<total_fare<<"\n";
-        system("pause");
     }
 }
 

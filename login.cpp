@@ -87,7 +87,7 @@ void login()
         if(n == 1 && success == true)
             admin_menu(success);
         else if(n == 2 && success == true)
-            user_menu(success);
+            user_menu(success, user, pass);
     }
 }
 
