@@ -2,10 +2,11 @@
 #include <fstream>
 #include "book_car.cpp"
 #include "car_rates.cpp"
+#include "prev_book.cpp"
 
 using namespace std;
 
-void user_menu(bool &success, string user, string pass)
+void user_menu(bool &success, string user)
 {
     int n;
     while(1)
@@ -13,7 +14,8 @@ void user_menu(bool &success, string user, string pass)
         system("cls");
         cout<<"1. Book A Car\n";
         cout<<"2. Rate Menu\n";
-        cout<<"3. Logout\n";
+        cout<<"3. Check Previous Bookings\n";
+        cout<<"4. Logout\n";
         cout<<"Select Option: ";
         cin>>n;
         switch(n)
@@ -66,7 +68,7 @@ void user_menu(bool &success, string user, string pass)
                         break;
                     }
                 }
-                book_car(model, user, pass);
+                book_car(model, user);
                 break;
             }
             case 2: 
@@ -75,6 +77,11 @@ void user_menu(bool &success, string user, string pass)
                 break;
             }
             case 3:
+            {
+                check_previous(user);
+                break;
+            }
+            case 4:
             {
                 success = false;
                 return;

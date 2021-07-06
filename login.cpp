@@ -6,6 +6,7 @@
 #include "registration.cpp"
 #include "admin_menu.cpp"
 #include "user_menu.cpp"
+//#include "prev_book.cpp"
 
 using namespace std;
 
@@ -87,7 +88,7 @@ void login()
         if(n == 1 && success == true)
             admin_menu(success);
         else if(n == 2 && success == true)
-            user_menu(success, user, pass);
+            user_menu(success, user);
     }
 }
 

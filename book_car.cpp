@@ -5,10 +5,11 @@
 #include <conio.h>
 #include <ctime>
 #include "fare.cpp"
+#include "calc_days.cpp"
 
 using namespace std;
 
-void book_car(string model, string user, string pass)
+void book_car(string model, string user)
 {
     vector<vector<string>> data1;
     vector<string> data2;
@@ -32,20 +33,6 @@ void book_car(string model, string user, string pass)
             data2.push_back(seats);
             data1.push_back(data2);
         }
-        //if(model == mod)
-        //{
-            //cout<<company<<" "<<name<<"\n";
-            //for(int j = 0; j<5; j++)
-            //    cout<<data2[j]<<" ";
-            //cout<<endl;
-            // data[i][0] = company;
-            // data[i][1] = name;
-            // data[i][2] = num;
-            // data[i][3] = mod;
-            // data[i][4] = seats;
-            //cout<<i+1<<". "<<data[i][0]<<" "<<data[i][1]<<"\n";
-            //i++;
-        //}
     }
     ifs.close();
     
@@ -75,6 +62,7 @@ void book_car(string model, string user, string pass)
         cin>>ans;
     }
     cout<<"Car Confirmed!!!\n";
+    cout<<"Press any Key for Date Booking.";
 
     int dd1, dd2, mm1, mm2, yy1, yy2;
     time_t now = time(0);
@@ -84,7 +72,6 @@ void book_car(string model, string user, string pass)
     int c_dd = date_time->tm_mday;
     int correct = 0;
     ans = 'n';
-    cout<<"Press any Key for Date Booking.";
     getch();
     while(tolower(ans) != 'y')
     {
@@ -118,7 +105,7 @@ void book_car(string model, string user, string pass)
     }
 
     cout<<"Dates Confirmed!!!\n";
-    cout<<"Press any Key for Approx. Fare Generation";
+    cout<<"Press any Key for Minimum Fare Generation";
     getch();
 
     int i, days;
@@ -141,15 +128,7 @@ void book_car(string model, string user, string pass)
             type = "Incorrect";
         if(type != "Incorrect")
         {
-            cout<<"Enter Days of Travel: ";
-            cin>>days;
-            /*if(days > 30)
-            {
-                cout<<"Sorry! Maximum Days allowed for Renting the Car is limited to 30\n";
-                cout<<"Press any Key to Re-Enter Fare Generation Details";
-                getch();
-                continue;
-            }*/
+            days = fabs(calc_days(dd1, mm1, yy1) - calc_days(dd2, mm2, yy2)) + 1;
             min_fare = calculate_fare() + calculate_fare(days) + calculate_fare(model, days, type);
             cout<<"Minimum Fare for your trip is: Rs. "<<min_fare<<"\n";
             cout<<"Press Any Key to View Complete Details";
@@ -158,13 +137,17 @@ void book_car(string model, string user, string pass)
             cout<<"Car Selected: "<<data1[n][0]<<" "<<data1[n][1]<<"\n";
             cout<<"Departure Date: "<<dd1<<"/"<<mm1<<"/"<<yy1<<"\n";
             cout<<"Arrival Date: "<<dd2<<"/"<<mm2<<"/"<<yy2<<"\n";
+            cout<<"Total Days: "<<days<<"\n";
             cout<<"Estimated Fare: "<<min_fare<<"\n";
             system("pause");
             break;
         }
-        cout<<"You have selected a Wrong Option. Press a Key to Select Again";
+        cout<<"You have selected a Wrong Option. Press Any Key to Select Again";
         getch();
     }
+    ofstream ofs("Booking.txt", ios :: app);
+    ofs<<user<<"/"<<data1[n][0]<<" "<<data1[n][1]<<"/"<<dd1<<"-"<<mm1<<"-"<<yy1<<"/"<<dd2<<"-"<<mm2<<"-"<<yy2<<"/"<<min_fare<<endl;
+    ofs.close();
 }
 
 /*int main()

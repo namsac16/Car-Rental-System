@@ -1,6 +1,6 @@
 #include <iostream>
 #include "cars.cpp"
-//#include "registration.cpp"
+#include "prev_book.cpp"
 
 using namespace std;
 
@@ -12,7 +12,7 @@ void admin_menu(bool &success)
         system("cls");
         cout<<"ADMIN MENU\n";
         cout<<"1. Add New Car\n";
-        cout<<"2. Update Fare\n";
+        cout<<"2. Check All Bookings\n";
         cout<<"3. Create New Admin\n";
         cout<<"4. Logout\n";
         cout<<"Select Option: ";
@@ -24,7 +24,11 @@ void admin_menu(bool &success)
                 input_car();
                 break;
             }
-            case 2 : break;
+            case 2:
+            {
+                check_previous();
+                break;
+            }
             case 3:
             {
                 admin_registration();
