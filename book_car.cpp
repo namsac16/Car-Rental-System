@@ -138,7 +138,7 @@ void book_car(string model, string user)
             cout<<"Departure Date: "<<dd1<<"/"<<mm1<<"/"<<yy1<<"\n";
             cout<<"Arrival Date: "<<dd2<<"/"<<mm2<<"/"<<yy2<<"\n";
             cout<<"Total Days: "<<days<<"\n";
-            cout<<"Estimated Fare: "<<min_fare<<"\n";
+            cout<<"Estimated Fare: Rs. "<<min_fare<<"\n";
             system("pause");
             break;
         }
