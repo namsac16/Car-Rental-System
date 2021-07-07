@@ -6,7 +6,6 @@
 #include "registration.cpp"
 #include "admin_menu.cpp"
 #include "user_menu.cpp"
-//#include "prev_book.cpp"
 
 using namespace std;
 
@@ -47,7 +46,6 @@ void login()
                     {
                         system("cls");
                         user_registration();
-                        getch();
                         continue;
                     }
                 }

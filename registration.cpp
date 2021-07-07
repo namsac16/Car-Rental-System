@@ -16,9 +16,19 @@ class Role{
 };
 
 class Admin : public Role{
+    public:
+        string ret_user()
+        {
+            return username;
+        }
 };
 
 class User : public Role{
+    public:
+        string ret_user()
+        {
+            return username;
+        }
 };
 
 ofstream &operator <<(ofstream &ofs, Role &R)
@@ -66,12 +76,35 @@ void user_registration()
 {
     system("cls");
     User U;
-    cout<<"USER REGISTRATION PORTAL\n";
-    ofstream ofs("User.txt", ios::app);
-    cin>>U;
-    ofs<<U;
-    ofs.close();
-    cout<<"User Account Created Successfully.\n";
+    string us, pass;
+    int allowed = 0;
+    while(allowed == 0)
+    {
+        system("cls");
+        cout<<"USER REGISTRATION PORTAL\n";
+        cin>>U;
+        ifstream ifs("User.txt");
+        while (!ifs.eof())
+        {
+            ifs>>us>>pass;
+            if(U.ret_user() == us)
+            {
+                allowed = 0;
+                cout<<"Username Already Exists. Please Try Another One!\n";
+                system("pause");
+                break;
+            }
+            allowed = 1;
+        }
+        ifs.close();
+    }
+    if(allowed == 1)
+    {
+        ofstream ofs("User.txt", ios::app);
+        ofs<<U;
+        ofs.close();
+        cout<<"User Account Created Successfully.\n";
+    }
     cout<<"Press Any Key to Continue.\n";
     getch();
 }
@@ -80,12 +113,36 @@ void admin_registration()
 {
     system("cls");
     Admin A;
-    cout<<"ADMIN REGISTRATION PORTAL\n";
-    ofstream ofs("Admin.txt", ios::app);
-    cin>>A;
-    ofs<<A;
-    ofs.close();
-    cout<<"Admin Account Created Successfully.\n";
+    string us, pass;
+    int allowed = 0;
+    while(allowed == 0)
+    {
+        system("cls");
+        cout<<"ADMIN REGISTRATION PORTAL\n";
+        cin>>A;
+        ifstream ifs("Admin.txt");
+        while (!ifs.eof())
+        {
+            ifs>>us>>pass;
+            if(A.ret_user() == us)
+            {
+                allowed = 0;
+                cout<<"Username Already Exists. Please Try Another One!\n";
+                system("pause");
+                break;
+            }
+            allowed = 1;
+        }
+        ifs.close();
+    }
+    if(allowed == 1)
+    {
+        ofstream ofs("Admin.txt", ios::app);
+        ofs<<A;
+        ofs.close();
+        cout<<"Admin Account Created Successfully.\n";
+    }
+    
     cout<<"Press Any Key to Continue.\n";
     getch();
 }
