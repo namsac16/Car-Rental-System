@@ -18,6 +18,7 @@ void login()
     string user, pass;
     while(!success)
     {
+        u_success = false, p_success = false;
         system("cls");
         cout<<"Welcome To Naman's Car Rental Portal\n";
         cout<<"LOGIN PORTAL\n";
