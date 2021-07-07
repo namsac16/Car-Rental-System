@@ -1,4 +1,7 @@
 #include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <conio.h>
 #include "login.cpp"
 
 using namespace std;
