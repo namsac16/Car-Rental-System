@@ -89,6 +89,7 @@ void input_car()
     int n, seats;
     char ch;
     string name, number, company;
+    system("cls");
     cout<<"CAR ENTRY PORTAL\n";
     cout<<"1. Hatchback\n";
     cout<<"2. Sedan\n";

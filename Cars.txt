@@ -5,3 +5,5 @@ Maruti Suzuki/Ciaz/DL03CA9696/Sedan/5
 Hyundai/Elantra/DL05CA3578/Sedan/5
 Datsun/Go+/DL05CB9363/Multi-Utility Vehicle (MUV)/7
 Renault/Duster/DL05CA8595/Sports-Utility Vehicle (SUV)/5
+Tempo/Traveller/DL03CA3321/Traveller/18
+Mini/Bus/DL05BC6549/Bus/35
