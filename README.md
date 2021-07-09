@@ -16,8 +16,6 @@ It Provides Different Portals for Handling Admin and User Interfaces both of the
 
 ### Other C++ Concepts Used:
 - STL Vectors
-- Namespace (STD)
-- Preprocessor Directive (#include)
 - Strings
 - File Handling
 - String Stream
@@ -73,53 +71,94 @@ Start the server
   
 ## Demo
 
-
+[Demo Video](https://www.linkedin.com/posts/naman-sachdeva-9151b5208_hello-linkedin-connections-apparently-my-activity-6819116814182809600-oS0o)
 
 
 ## Screenshots
 
-![Admin Menu](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Admin_Menu.PNG)
-
-![Car's Entry](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Car's_Entry.PNG)
-
-![Car Entry Portal](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Car_Entry_Portal.PNG)
-
-![Car Rental Portal](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Car_Rental_Portal.PNG)
-
-![Car Selection](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Car_Selection.PNG)
-
-![Check All Bookings](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Check_All_Bookings.PNG)
-
-![Check Previous Bookings](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Check_Previous_Bookings.PNG)
-
-![Date Confirmation](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Date_Confirmation.PNG)
-
-![Date Entry Fail1](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Date_Entry_Fail1.PNG)
-
-![Date Entry Fail2](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Date_Entry_Fail2.PNG)
-
-![Details Viewer](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Details_Viewer.PNG)
-
-![Fare Generation](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Fare_Genreation.PNG)
-
-![Login Fail1](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Login_Fail_1.PNG)
-
-![Login Fail2](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Login_Fail_2.PNG)
-
-![Login Success](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Login_Success.PNG)
+Main Screen
 
 ![Main](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Main.PNG)
 
-![Rate Menu](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Rate_Menu.PNG)
+Login Fail1
+
+![Login Fail1](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Login_Fail_1.PNG)
+
+Login Fail2
+
+![Login Fail2](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Login_Fail_2.PNG)
+
+Login Success
+
+![Login Success](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Login_Success.PNG)
+
+Admin Menu
+
+![Admin Menu](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Admin_Menu.PNG)
+
+Car's Entry Portal
+
+![Car Entry Portal](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Car_Entry_Portal.PNG)
+
+Car's Enrty
+
+![Car's Entry](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Car's_Entry.PNG)
+
+Check All Bookings
+
+![Check All Bookings](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Check_All_Bookings.PNG)
+
+Registration Fail
 
 ![Registration Fail](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Registration_Fail_1.PNG)
 
+Registration Success
+
 ![Registration Success](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Registration_Success.PNG)
+
+User Login Page
 
 ![User Login Page](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/User_Login_Page.PNG)
 
+User Menu
+
 ![User Menu](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/User_Menu.PNG)
 
+Rate Menu
+
+![Rate Menu](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Rate_Menu.PNG)
+
+Car Rental Portal
+
+![Car Rental Portal](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Car_Rental_Portal.PNG)
+
+Car Selection
+
+![Car Selection](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Car_Selection.PNG)
+
+Date Entry Fail1
+
+![Date Entry Fail1](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Date_Entry_Fail1.PNG)
+
+Date Entry Fail2
+
+![Date Entry Fail2](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Date_Entry_Fail2.PNG)
+
+Date Confirmation
+
+![Date Confirmation](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Date_Confirmation.PNG)
+
+Fare Generation
+
+![Fare Generation](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Fare_Genreation.PNG)
+
+Details Viewer
+
+![Details Viewer](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Details_Viewer.PNG)]
+
+Check Previous Bookings
+
+![Check Previous Bookings](https://github.com/namsac16/Car-Rental-System/blob/main/Screenshots/Check_Previous_Bookings.PNG)
 
 
 ## Authors
